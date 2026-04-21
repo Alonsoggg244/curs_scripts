@@ -19,4 +19,8 @@ echo "Nom del script ${SCRIPT_NAME}"
 echo "1er parametre: ${1}"
 USER_NAME=${1}
 echo "USER_NAME: ${USER_NAME}"
-echo "2n parametre: ${2}"
+#desplaçar els parametres a l'esquerra
+shift
+
+NOM_COMPLET="${*}"
+echo "NOM_COMPLET: ${NOM_COMPLET}"
