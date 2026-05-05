@@ -27,3 +27,13 @@ do
     PASSWORD=$(date +%s%N | sha256sum | head -c10 )
     echo "${USER_NAME}:${PASSWORD}"
 done
+
+#recorrer els parametres amb un WHILE
+echo "ITERACIÓ AMB WHILE"
+while [[ ${X} -ge 1 ]]
+do
+    #${1} -->mostra la primera posició
+    USER_NAME=${1}
+    PASSWORD=$(date +%s%N | sha256sum | head -c10 )
+    echo "${USER_NAME}:${PASSWORD}"
+done
